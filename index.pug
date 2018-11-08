@@ -1,0 +1,90 @@
+extends layoutBS
+
+block content
+
+  #welcomePage.carousel.slide.text-entered(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='./images/background1.jpg', alt='First slide')
+      .carousel-caption
+        h6.h CollegeInfo
+      .carousel-caption
+        a#welcomePageLogin.btn.btn-danger(href="/auth/google")
+         span.fa.fa-google-plus  Log in via Google
+
+
+  .container
+      p &nbsp
+      .form-row
+        .col-lg-3
+          .card#welcomePage
+            img.rounded-circle.rounded.mx-auto.d-block(src='./images/photo0.jpg', alt='Card image cap', width='200', height='200')
+            .card-body
+              h22.card-title Class Schedule
+              p.card-text
+                | Build your personal class schedule nimble. It is not just a schedule!
+
+        .col-lg-3
+          .card#welcomePage
+            img.rounded-circle.rounded.mx-auto.d-block(src='./images/photo1.jpg', alt='Card image cap', width='200', height='200')
+            .card-body
+              h22.card-title Academy
+              p.card-text
+                | Want to know major/minor information? Being confused about requirement? You can find everything you need!
+
+        .col-lg-3
+          .card#welcomePage
+            img.rounded-circle.rounded.mx-auto.d-block(src='./images/photo2.jpg', alt='Card image cap', width='200', height='200')
+            .card-body
+              h22.card-title Students' Market
+              p.card-text
+                | Flea market! Textbooks, furnitures, electronic devices... Attractive in price and quality!
+
+        .col-lg-3
+          .card#welcomePage
+            img.rounded-circle.rounded.mx-auto.d-block(src='./images/photo3.jpg', alt='Card image cap', width='200', height='200')
+            .card-body
+              h22.card-title Groups
+              p.card-text
+                | Lively college community! Help you to find more friends!
+
+
+
+  #welcomePageF1.row.featurette
+    .col-md-7
+      h2.featurette-heading
+        | What CollegeInfo can do for you?
+      #teamIN.p.lead
+        ul
+          li
+            p Go to college, one App is enough!
+          li
+            p Students Market, Lost & Found, Simple your college life!
+          li
+            p Log in college system quickly. Build your personal schedule!
+          li
+            p Bulletin Board, help you know everything!
+          li
+            p Connect with other classmate, find new friends!
+
+    .col-md-5
+      img(src='https://media1.popsugar-assets.com/files/thumbor/TXZOZ8Y748Em-OxtfuJKpYW8deA/160x160/filters:format_auto-!!-:strip_icc-!!-:sharpen-!1,0,true!-/2016/10/17/977/n/1922398/12720afe014ba434_GettyImages-615190902/i/Leonardo-DiCaprio-Before-Flood-Premiere-Paris-2016.jpg', alt='Card image cap', width='500', height='500')
+
+
+
+
+
+  .container
+    footer#welcomePage.pt-4.my-md-5.pt-md-5.border-top
+        .row
+          .col-6.col-md
+            img.mb-2(src='./images/logo1.jpg', alt='', width='70', height='60')
+            small.d-block.mb-3.text-muted &copy; 2017-2022
+
+
+          .col-6.col-md
+            a.text-muted(href='footer-terms') Terms
+          .col-6.col-md
+            a.text-muted(href='team') About us
+          .col-6.col-md
+            a.text-muted(href='contacts') Contact us

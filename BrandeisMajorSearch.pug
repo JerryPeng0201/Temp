@@ -1,0 +1,77 @@
+extends layoutBSBrandeis
+
+block head
+
+
+block content
+  .jumbotron#classSearch
+    p1 Brandeis Major/Minor Search
+    p &nbsp
+    form(method='post')
+      .form-row.align-items-center
+        .col-auto.my-1
+          label Select a Department
+          select(name='departmentBar')#searchBar.sub-bar.custom-select.mr-sm-2
+            each department in list
+              option(value= department.id) #{department.name}
+
+
+      p &nbsp
+      button.btn.btn-primary(type='submit') Search
+
+  if result
+    p List of all department result
+    table#mytable.table.table-bordered
+      thead.thead-light
+        each department in result
+          tr
+            th
+              | #{department.name}
+            th
+              | Compulsory Courses
+            th
+              | Elective Courses
+            th
+              | Comment
+            th
+              | Grade & Pass
+      tbody
+        each department in result
+          tr
+            th
+              p Minor Requirement
+            each part in department.minor
+              td
+                p #{part.compulsory}
+              td
+                p #{part.electives}
+              td
+                p #{part.comment}
+              td
+                p #{part.requirements}
+          tr
+            each part in department.major
+              th
+                p Major Requirement (BA)
+              each ba in part.ba
+                td
+                  p #{ba.compulsory}
+                td
+                  p #{ba.electives}
+                td
+                  p #{ba.comment}
+                td
+                  p #{ba.requirements}
+          tr
+            each part in department.major
+              th
+                p Major Requirement (BS)
+              each bs in part.bs
+                td
+                  p #{bs.compulsory}
+                td
+                  p #{bs.electives}
+                td
+                  p #{bs.comment}
+                td
+                  p #{bs.requirements}
